@@ -1,0 +1,5 @@
+[build]
+  # Install dependencies if they are not already present (Netlify CI installs them
+  # automatically; this covers environments that run the build command directly).
+  command = "(test -x node_modules/.bin/vite || npm ci --include=dev) && npm run build"
+  publish = "dist"
